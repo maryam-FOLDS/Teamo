@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo Player</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .player-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 15px;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <h1>Playing Song</h1>
+        <p>Te Amo - Dum Maaro Dum</p>
+        <audio id="myAudio" controls autoplay>
+            <source src="https://raw.githubusercontent.com/maryam-FOLDS/Teamo/main/Te%20Amo%20-%20Dum%20Maaro%20Dum%20320%20Kbps.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="note">
+            If the song doesn't start automatically, please click the play button.
+            Browser autoplay policies may prevent automatic playback without prior user interaction.
+        </div>
+    </div>
+
+    <script>
+        // Optional: You can add JavaScript for more control, but autoplay should handle it.
+        // For instance, to try and force play if autoplay fails due to policy
+        // (though this also might be blocked if there's no user gesture):
+        /*
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(error => {
+                console.log("Autoplay was prevented:", error);
+                // You could show a message to the user here to click play.
+            });
+        });
+        */
+    </script>
+</body>
+</html>
